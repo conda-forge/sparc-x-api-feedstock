@@ -25,6 +25,8 @@ requirements:
   run:
     - python >=3.8
     - ase >=3.22
+    - numpy >=1.22
+    - packaging >=20.0
 
 test:
   imports:
