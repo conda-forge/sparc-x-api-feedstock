@@ -1,5 +1,5 @@
 {% set name = "SPARC-X-API" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/SPARC-X/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: dca059a2bc4a020050ce8983b247176471eeb76e4a4dd96708133e0fcad18e19
+  sha256: 4a83c4c50fac6f7490a622eaaaa20c1cb5a9bc53c8d95197557089b99b0b2443
 
 build:
   noarch: python
@@ -25,6 +25,8 @@ requirements:
   run:
     - python >=3.8
     - ase >=3.22
+    - numpy >=1.22
+    - packaging >=20.0
 
 test:
   imports:
