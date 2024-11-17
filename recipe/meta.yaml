@@ -1,5 +1,6 @@
 {% set name = "SPARC-X-API" %}
 {% set version = "1.0.5" %}
+{% set python_min = "3.8" %}
 
 
 package:
@@ -20,11 +21,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - ase >=3.22
     - numpy >=1.23
     - packaging >=20.0
@@ -35,6 +36,7 @@ test:
     - sparc
     - sparc.io
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
