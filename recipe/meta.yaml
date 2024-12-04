@@ -1,5 +1,5 @@
 {% set name = "SPARC-X-API" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 {% set python_min = "3.8" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/SPARC-X/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: add8e4d559d3fdb3808b7b585570062a3f5df4ed857ed851cd2f2a6740b1d9c8
+  sha256: 527a535431c9984a71dd421ac63f29267ff64a5c215e78cfff1fdd6804631d08
 
 build:
   noarch: python
@@ -41,8 +41,7 @@ test:
   commands:
     - pip check
     - python -m sparc.quicktest
-    - python -c "from sparc.quicktest import psp_test; assert psp_test()"
-    - sparc-ase help
+    - python -c "from sparc.quicktest import PspTest; PspTest()"
 
 about:
   home: https://github.com/SPARC-X/SPARC-X-API
