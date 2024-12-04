@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/SPARC-X/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 527a535431c9984a71dd421ac63f29267ff64a5c215e78cfff1fdd6804631d08
+  sha256: b730f82d29303a13b070442c56f5a278ec315beea8d6516e8e6238796a8a0120
 
 build:
   noarch: python
