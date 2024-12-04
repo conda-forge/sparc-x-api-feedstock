@@ -1,5 +1,6 @@
 {% set name = "SPARC-X-API" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.6" %}
+{% set python_min = "3.8" %}
 
 
 package:
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://github.com/SPARC-X/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: b4b167a5b3a47ef34a59a3cb7610e259a9061b6ba97eba6b87cf0f255647ed99
+  sha256: b730f82d29303a13b070442c56f5a278ec315beea8d6516e8e6238796a8a0120
 
 build:
   noarch: python
@@ -20,11 +21,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - ase >=3.22
     - numpy >=1.23
     - packaging >=20.0
@@ -35,12 +36,12 @@ test:
     - sparc
     - sparc.io
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
     - python -m sparc.quicktest
-    - python -c "from sparc.quicktest import psp_test; assert psp_test()"
-    - sparc-ase help
+    - python -c "from sparc.quicktest import PspTest; PspTest()"
 
 about:
   home: https://github.com/SPARC-X/SPARC-X-API
@@ -53,8 +54,8 @@ about:
     1. ASE-compatible I/O format for SPARC files
     2. A JSON API interfacing with SPARC's C-code for parameter validation and conversion
     3. A comprehensive calculator interface for SPARC.
-  doc_url: https://github.com/SPARC-X/SPARC-X-API/blob/master/README.md
-  dev_url: https://github.com/SPARC-X/SPARC-X-API
+  doc_url: https://sparc-x.github.io/SPARC-X-API/
+  dev_url: https://sparc-x.github.io/SPARC-X-API/contribute.html
 
 extra:
   recipe-maintainers:
