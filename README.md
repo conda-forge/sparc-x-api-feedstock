@@ -9,9 +9,9 @@ Package license: GPL-3.0-or-later
 
 Summary: SPARC-X-API: A Python API for the SPARC-X DFT Code
 
-Development: https://github.com/SPARC-X/SPARC-X-API
+Development: https://sparc-x.github.io/SPARC-X-API/contribute.html
 
-Documentation: https://github.com/SPARC-X/SPARC-X-API/blob/master/README.md
+Documentation: https://sparc-x.github.io/SPARC-X-API/
 
 `SPARC-X-API` is an [ASE](https://wiki.fysik.dtu.dk/ase/)-compatible Python API for the density functional theory (DFT) code [SPARC](https://github.com/SPARC-X/SPARC). It offers:
 1. ASE-compatible I/O format for SPARC files
@@ -153,5 +153,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@ajmedford](https://github.com/ajmedford/)
 * [@alchem0x2a](https://github.com/alchem0x2a/)
+* [@ltimmerman3](https://github.com/ltimmerman3/)
 
